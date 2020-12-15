@@ -2,7 +2,7 @@ set -e
 echo "----------------------Getting Packages-----------------------"
 pacman 		-Syuu --noconfirm
 pacman 		-S --noconfirm --needed git ruby gcc bison util-macros automake libtool mingw-w64-x86_64-cmake cmake mingw-w64-x86_64-mruby python3 autoconf zip make
-pacman 		-S --noconfirm --needed mingw-w64-x86_64-gcc mingw-w64-x86_64-make mingw-w64-x86_64-python2 mingw-w64-x86_64-gcc-fortran mingw-w64-x86_64-gcc-libgfortran
+pacman 		-S --noconfirm --needed mingw-w64-x86_64-gcc mingw-w64-x86_64-make python2 mingw-w64-x86_64-gcc-fortran mingw-w64-x86_64-gcc-libgfortran
 mkdir pkg -p
 
 echo "------------------------Cleaning-----------------------------"
@@ -87,5 +87,5 @@ make setupwin
 make builddepwin
 cd ..
 
-./z/build-package.sh demo true
+#./z/build-package.sh demo true
 ./z/build-package.sh release false
